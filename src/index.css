@@ -1,0 +1,9 @@
+#root {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.active {
+  color: blue;
+  font-weight: bold;
+}
