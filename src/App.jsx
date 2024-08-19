@@ -1,6 +1,6 @@
 import React from "react";
-import Navbar from "./components/Navbar";
 import Movies from "./components/Movies";
+import MovieDescription from "./components/MovieDescription";
 import { Routes, Route } from "react-router-dom"
 import Home from "./components/Home";
 import NotFound from "./components/PageNotFound";
@@ -13,6 +13,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/movies" element={<Movies />} />
+          <Route path="/movies/:movieId" element={<MovieDescription />} />
           <Route path="*" element={<NotFound />} />
         </Route>
 

@@ -22,8 +22,7 @@ const Movies = () => {
         .catch(error => {
             console.error("Error: ", error)
         })
-        
-        console.log("I am activated")
+
     }, [])
 
 
@@ -36,7 +35,7 @@ const Movies = () => {
                             <div key={"mykey" + movie.id} className="card h-100">
                                 <img src={movie.imagePath} className="card-img-top" alt="..."/>
                                 <div className="card-body">
-                                    <p className="card-text">{movie.movieDescription}</p>
+                                    <p className="card-text">{movie.budget}</p>
                                 </div>
                             </div>  
                         </div>
