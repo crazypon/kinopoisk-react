@@ -26,8 +26,19 @@ const MovieDescription = () => {
 
     }, [])
 
+    console.log(currentMovie);
+    
     return (
-        loading ? <div>bye</div> : <div>hello</div>
+        <div className="row row-md-2 row-sm-1">
+            <h3>{currentMovie.title}</h3>
+            <div className="col">
+                <img src={currentMovie.imagePath} alt="movie poster" />
+                <p>{currentMovie.imagePath}</p>
+            </div>
+            <div className="col">
+                <p>{currentMovie.movieDescription}</p>
+            </div>
+        </div>
     )
 }
 
