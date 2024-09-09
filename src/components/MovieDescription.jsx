@@ -19,24 +19,43 @@ const MovieDescription = () => {
         .then( movie => {
             setCurrentMovie(movie);
             setLoading(false);
+            console.log(currentMovie);
         })
         .catch( error => {
             console.log("Error: " + error)
         })
 
     }, [])
-
-    console.log(currentMovie);
     
     return (
-        <div className="row row-md-2 row-sm-1">
-            <h3>{currentMovie.title}</h3>
-            <div className="col">
-                <img src={currentMovie.imagePath} alt="movie poster" />
-                <p>{currentMovie.imagePath}</p>
+        <div className="row">
+            <h3 className="movieTitle">{currentMovie.title}</h3>
+            <div className="col col-lg-4 col-md-6 col-sm-12">
+                <img src={"/" + currentMovie.imagePath} className="img-fluid" alt="movie poster" />
             </div>
-            <div className="col">
+            <div className="col col-lg-8 col-md-6 col-sm-12">
+                <p>Budget: {currentMovie.budget}</p>
+                <p>Starring: {currentMovie.mainCharacter}</p>
+                <p>Film Director: {currentMovie.filmDirector}</p>
+                <p>Genre: {currentMovie.genre}</p>
+                <div className="ratings">
+                    <p>IMDB: {currentMovie.imdbrating} </p>
+                    <p>RT: {currentMovie.rottenTomatoes}</p>
+                    <p>KP: {currentMovie.localRating}</p>
+                </div>
+                <br />
+                <div className="movieButtons">
+                    <button className="btn btn-primary">watch later</button>
+                    <button className="btn btn-primary">rate</button>     
+                </div>
+
+                <br />
+                <br />
+                <h4>Description</h4>
                 <p>{currentMovie.movieDescription}</p>
+            </div>
+            <div className="col col-lg-12 col-sm-12 col-md-12">
+                <h4>Comments</h4>
             </div>
         </div>
     )

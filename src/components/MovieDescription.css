@@ -1,0 +1,19 @@
+img {
+    height: 400px;
+}
+
+.movieTitle {
+    margin-bottom: 30px;
+}
+
+.ratings {
+    display: flex;
+}
+
+.ratings p {
+    margin-right: 40px;
+}
+
+.movieButtons button {
+    margin-right: 20px;
+}
