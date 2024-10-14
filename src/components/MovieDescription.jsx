@@ -65,7 +65,12 @@ const MovieDescription = () => {
                     <p>{currentMovie.movieDescription}</p>
                 </div>
                 <div className="col col-lg-12 col-sm-12 col-md-12">
-                    <h4>Comments {console.log(currentMovie)}</h4>
+                    <h4>Comments</h4>
+                    {currentMovie.comments.map(comment => {
+                        return (
+                            <p>{comment.content}</p>
+                        )
+                    })}
                 </div>
             </>
             )}

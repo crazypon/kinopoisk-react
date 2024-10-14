@@ -33,8 +33,8 @@ const Movies = () => {
                     return (
                         <div className="col">
                             <div key={"mykey" + movie.id} className="card h-100">
-                                <img src={movie.imagePath} className="card-img-top" alt="..."/>
-                                <div className="card-body">
+                                <img src={movie.imagePath} className="card-img-top h-100" alt="..."/>
+                                <div className="card-body"> 
                                     <p className="card-text">{movie.budget}</p>
                                 </div>
                             </div>  
